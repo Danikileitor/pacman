@@ -1,8 +1,7 @@
 const canvas = document.getElementById("pacman");
-const juego = document.getElementById("juego");
 const c = canvas.getContext("2d");
-canvas.width = juego.width;
-canvas.height = juego.height;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
 class Boundary {
   static width = 40;
