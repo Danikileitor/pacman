@@ -6,13 +6,20 @@ body {
   width: 100%;
   margin: auto;
   text-align: center;
-  background-color: aqua;
+  background-color: black;
   overflow: hidden;
 }
+canvas {
+  background-color: black;
+}
 section {
-  position: relative;
+  margin: auto;
   border: none;
   background-color: black;
+  height: 80vh;
+}
+#juego{
+  width: 50%;
 }
 table{
     width: 100%;

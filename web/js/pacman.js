@@ -1,7 +1,8 @@
 const canvas = document.getElementById("pacman");
+const juego = document.getElementById("juego");
 const c = canvas.getContext("2d");
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.width = juego.width;
+canvas.height = juego.height;
 
 class Boundary {
   static width = 40;
@@ -92,7 +93,7 @@ const map = [
   ["|", ".", "[", "]", ".", ".", ".", "[", "]", ".", "|"],
   ["|", ".", ".", ".", ".", "^", ".", ".", ".", ".", "|"],
   ["|", ".", "b", ".", "[", "5", "]", ".", "b", ".", "|"],
-  ["|", ".", ".", ".", ".", ".", ".", ".", ".", "p", "|"],
+  ["|", ".", ".", ".", ".", ".", ".", ".", ".", ".", "|"],
   ["4", "-", "-", "-", "-", "-", "-", "-", "-", "-", "3"],
 ];
 
@@ -375,6 +376,22 @@ function animate() {
       }
     }
   }
+
+  for (let i = pellets.length - 1; i > 0; i--) {
+    const pellet = pellets[i];
+    pellet.draw();
+
+    if (
+      Math.hypot(
+        pellet.position.x - player.position.x,
+        pellet.position.y - player.position.y
+      ) <
+      pellet.radius + player.radius
+    ) {
+      pellets.splice(i, 1);
+    }
+  }
+
   boundaries.forEach((boundary) => {
     boundary.draw();
 
