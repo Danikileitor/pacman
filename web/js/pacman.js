@@ -55,12 +55,6 @@ class Player {
   }
 }
 
-function createImage(src) {
-  const image = new Image();
-  image.src = src;
-  return image;
-}
-
 const pellets = [];
 const boundaries = [];
 const player = new Player({
@@ -101,6 +95,12 @@ const map = [
   ["|", ".", ".", ".", ".", ".", ".", ".", ".", "p", "|"],
   ["4", "-", "-", "-", "-", "-", "-", "-", "-", "-", "3"],
 ];
+
+function createImage(src) {
+  const image = new Image();
+  image.src = src;
+  return image;
+}
 
 map.forEach((row, i) => {
   row.forEach((symbol, j) => {
