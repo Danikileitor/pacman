@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+body {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+}
+section {
+  position: relative;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+iframe{
+    width: 100%;
+    border: none;
+}

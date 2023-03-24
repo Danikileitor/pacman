@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+body {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+  overflow: hidden;
+}
+section {
+  position: relative;
+  border: none;
+  background-color: black;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+  border: 1px solid black;
+  vertical-align: middle;
+  color: whitesmoke;
+}
